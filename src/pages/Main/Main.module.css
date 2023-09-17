@@ -1,0 +1,66 @@
+.flex_wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.flex_wrapper a {
+  flex: 1;
+  /* flex의 비율만 바뀌는 걸 보여주기 위해서 */
+  transition: flex 0.35s;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.flex_wrapper a.one {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-001.jpg);
+}
+.flex_wrapper a.two {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-002.jpg);
+}
+.flex_wrapper a.three {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-003.jpg);
+}
+.flex_wrapper a.four {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-004.jpg);
+}
+
+.flex_wrapper a.five {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-005.jpg);
+}
+.flex_wrapper a:hover {
+  flex: 3;
+}
+
+.flex_wrapper .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 10px;
+  background: rgba(0, 0, 0, 0.6);
+  transition: background 0.35s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_wrapper a:hover .overlay {
+  flex: 3;
+  background: rgba(0, 0, 0, 0);
+}
+
+.overlay_inner * {
+  opacity: 1;
+  color: #fff;
+  text-align: center;
+}
+
+/*
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-001.jpg
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-002.jpg
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-003.jpg
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-004.jpg
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-005.jpg
+*/

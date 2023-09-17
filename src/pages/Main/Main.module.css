@@ -52,9 +52,23 @@
 }
 
 .overlay_inner * {
-  opacity: 1;
+  opacity: 0;
   color: #fff;
   text-align: center;
+  transition: 0.4s;
+}
+
+.overlay_inner h2 {
+  transform: translateY(-60px);
+}
+
+.overlay_inner p {
+  transform: translateY(60px);
+}
+
+.flex_wrapper a:hover .overlay_inner * {
+  transform: none;
+  opacity: 1;
 }
 
 /*

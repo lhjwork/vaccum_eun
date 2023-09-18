@@ -16,7 +16,7 @@
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-001.jpg);
 }
 .flex_wrapper a.two {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-002.jpg);
+  background-image: url(../../assets/main/main_products.jpg);
 }
 .flex_wrapper a.three {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-003.jpg);
@@ -65,6 +65,10 @@
 .overlay_inner p {
   transform: translateY(60px);
 }
+.flex_wrapper a:hover .overlay_inner {
+  background: #d30815 url(../../assets/commons/bg-bienvenue.jpg) no-repeat;
+  width: 100%;
+}
 
 .flex_wrapper a:hover .overlay_inner * {
   transform: none;
@@ -78,3 +82,29 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-003.jpg
 https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-004.jpg
 https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-005.jpg
 */
+
+@media (max-width: 768px) {
+  .flex_wrapper {
+    flex-direction: column;
+  }
+
+  .overlay_inner * {
+    opacity: 1;
+  }
+
+  .overlay_inner h2 {
+    transform: none;
+  }
+
+  .overlay_inner p {
+    transform: none;
+  }
+
+  .flex_wrapper .overlay {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .flex_wrapper a:hover {
+    flex: 1;
+  }
+}
